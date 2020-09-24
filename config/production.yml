@@ -1,5 +1,0 @@
-server:
-  origin:
-
-db:
-  synchronize: false
