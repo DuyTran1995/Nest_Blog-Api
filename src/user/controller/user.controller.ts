@@ -11,26 +11,26 @@ export class UserController {
 
     @Post()
     create(@Body() user: User): Observable<User> {
-        return this.userService.create(user)
-    }
+        return this.userService.create(user);
+    };
 
     @Get(':id')
     findOne(@Param('id', ParseIntPipe) id: number): Observable<User> {
-        return this.userService.findOne(id)
-    }
+        return this.userService.findOne(id);
+    };
 
     @Get()
     findAll(): Observable<User[]> {
-        return this.userService.findAll()
-    }
+        return this.userService.findAll();
+    };
 
     @Delete(':id')
     deleteOne(@Param('id', ParseIntPipe) id: number): Observable<User> {
-        return this.userService.deleteOne(id)
-    }
+        return this.userService.deleteOne(id);
+    };
 
     @Put(':id')
     updateOne(@Param('id', ParseIntPipe) id: number, @Body() user: User): Observable<User> {
-        return this.userService.updateOne(id, user)
-    }
+        return this.userService.updateOne(id, user);
+    };
 }
