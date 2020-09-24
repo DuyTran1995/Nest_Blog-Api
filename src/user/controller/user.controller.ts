@@ -16,7 +16,6 @@ export class UserController {
 
     @Get(':id')
     findOne(@Param('id', ParseIntPipe) id: number): Observable<User> {
-        console.log(id)
         return this.userService.findOne(id)
     }
 
