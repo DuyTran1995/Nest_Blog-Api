@@ -1,5 +1,6 @@
 import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put } from '@nestjs/common';
 import { Observable } from 'rxjs';
+import { map } from "rxjs/operators";
 import { User } from '../models/user.interface';
 import { UserService } from '../services/user.service';
 
@@ -13,6 +14,15 @@ export class UserController {
     create(@Body() user: User): Observable<User> {
         return this.userService.create(user);
     };
+
+    @Post('login')
+    login(@Body() user: User): Observable<any> {
+        return this.userService.login(user).pipe(
+            map((jwt: string) => {
+                return { accessToken: jwt }
+            })
+        )
+    }
 
     @Get(':id')
     findOne(@Param('id', ParseIntPipe) id: number): Observable<User> {
