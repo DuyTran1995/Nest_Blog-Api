@@ -1,7 +1,7 @@
 export default () => ({
     port: process.env.PORT,
     jwtSecret: process.env.SECRET_KEY,
-    expiresIn: process.env.expiresIn,
+    expiresToken: process.env.expiresToken,
     database: {
         type: process.env.DB_TYPE,
         host: process.env.DB_HOST,

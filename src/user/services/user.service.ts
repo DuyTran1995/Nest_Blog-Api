@@ -5,7 +5,7 @@ import { catchError, map, switchMap } from 'rxjs/operators'
 import { AuthService } from 'src/auth/service/auth.service';
 import { Repository } from 'typeorm';
 import { UserEntity } from '../models/user.entity';
-import { User } from '../models/user.interface';
+import { User, UserRole } from '../models/user.interface';
 
 @Injectable()
 export class UserService {
@@ -22,6 +22,7 @@ export class UserService {
                 newUser.username = user.username;
                 newUser.email = user.email;
                 newUser.password = passwordHash;
+                newUser.role = user.role;
 
                 return from(this.UserRepository.save(newUser)).pipe(
                     map((user: User) => {
@@ -33,6 +34,7 @@ export class UserService {
             })
         )
     }
+
 
 
     findOne(id: number): Observable<User> {
@@ -101,5 +103,9 @@ export class UserService {
 
     findByMail(email: string): Observable<User> {
         return from(this.UserRepository.findOne({ email }));
+    }
+
+    updateRoleOfUser(id: number, user: User): Observable<any> {
+        return from(this.UserRepository.update(id, user))
     }
 }
