@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "626254e7-ab6f-4477-ba02-89b67e5ded1e",
+		"_postman_id": "835ee1a5-c50f-40dd-9721-4dc269b22e6b",
 		"name": "Blog_API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -24,12 +24,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}:{{port}}/users",
+							"raw": "{{baseUrl}}:{{port}}/api/v1/users",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"port": "{{port}}",
 							"path": [
+								"api",
+								"v1",
 								"users"
 							]
 						}
@@ -42,12 +44,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}:{{port}}/users/1",
+							"raw": "{{baseUrl}}:{{port}}/api/v1/users/1",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"port": "{{port}}",
 							"path": [
+								"api",
+								"v1",
 								"users",
 								"1"
 							]
@@ -91,12 +95,14 @@
 							]
 						},
 						"url": {
-							"raw": "{{baseUrl}}:{{port}}/users",
+							"raw": "{{baseUrl}}:{{port}}/api/v1/users",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"port": "{{port}}",
 							"path": [
+								"api",
+								"v1",
 								"users"
 							]
 						}
@@ -124,12 +130,14 @@
 							]
 						},
 						"url": {
-							"raw": "{{baseUrl}}:{{port}}/users/3",
+							"raw": "{{baseUrl}}:{{port}}/api/v1/users/3",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"port": "{{port}}",
 							"path": [
+								"api",
+								"v1",
 								"users",
 								"3"
 							]
@@ -158,12 +166,14 @@
 							]
 						},
 						"url": {
-							"raw": "{{baseUrl}}:{{port}}/users/5",
+							"raw": "{{baseUrl}}:{{port}}/api/v1/users/5",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"port": "{{port}}",
 							"path": [
+								"api",
+								"v1",
 								"users",
 								"5"
 							]
@@ -192,12 +202,14 @@
 							]
 						},
 						"url": {
-							"raw": "{{baseUrl}}:{{port}}/users/5/role",
+							"raw": "{{baseUrl}}:{{port}}/api/v1/users/5/role",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"port": "{{port}}",
 							"path": [
+								"api",
+								"v1",
 								"users",
 								"5",
 								"role"
@@ -227,12 +239,14 @@
 							]
 						},
 						"url": {
-							"raw": "{{baseUrl}}:{{port}}/users/login",
+							"raw": "{{baseUrl}}:{{port}}/api/v1/users/login",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"port": "{{port}}",
 							"path": [
+								"api",
+								"v1",
 								"users",
 								"login"
 							]
